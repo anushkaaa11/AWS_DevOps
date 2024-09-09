@@ -14,18 +14,18 @@ phases:
       - DOCKER_PASSWORD=$(aws ssm get-parameter --name MyDockerPass --with-decryption --query 'Parameter.Value' --output text)
       
       - echo "Logging in to Docker Hub..."
-      - docker login -u vimal13 -p $DOCKER_PASSWORD
+      - docker login -u anushkaaa11 -p $DOCKER_PASSWORD
 
   build:
     commands:
       - echo "build the docker image ..."
-      - docker build  -t vimal13/lwwebworkshop .
+      - docker build  -t anushkaaa11/PracticeAWS .
       - docker images
 
   post_build:
     commands:
       - echo "final pushing image to docker hub .."
-      - docker push vimal13/lwwebworkshop
+      - docker push anushkaaa11/PracticeAWS
 
 artifacts:
   files:
