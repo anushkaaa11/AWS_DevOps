@@ -4,84 +4,53 @@
   <title>Calculator</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <style>
-  body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f4f7f9; /* Light background for a clean look */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-#calculator {
-    width: 300px;
-    margin: 50px auto;
-    padding: 20px;
-    border-radius: 12px;
-    background: #f7f9fc;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
 
-#calculator .display {
-    height: 60px;
-    padding: 10px;
-    border-radius: 8px;
-    background: #ffffff;
-    font-size: 24px;
-    text-align: right;
-    color: #333; 
-    border: 1px solid #ddd;
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); 
-}
+    #calc-form {
+      width: 300px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
 
-#calculator .buttons {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-}
+    #calc-form input[type="number"] {
+      width: 100%;
+      height: 40px;
+      margin-bottom: 20px;
+      padding: 10px;
+      font-size: 18px;
+      border: 1px solid #ccc;
+    }
 
-#calculator .buttons button {
-    padding: 15px;
-    font-size: 18px;
-    border: none;
-    border-radius: 8px;
-    background: #e0e7ff; 
-    color: #333;
-    cursor: pointer;
-    transition: background 0.2s ease, transform 0.1s ease; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+    #calc-form button[type="submit"] {
+      width: 100%;
+      height: 40px;
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 10px;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
 
-#calculator .buttons button:hover {
-    background: #c7d2fe; 
-}
+    #calc-form button[type="submit"]:hover {
+      background-color: #3e8e41;
+    }
 
-#calculator .buttons button:active {
-    background: #a5b4fc;
-    transform: scale(0.95); 
-}
+    #result {
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
 
-#calculator .buttons button.operator {
-    background: #fef3c7; 
-}
-
-#calculator .buttons button.clear {
-    background: #fecaca; 
-}
-
-#calculator .buttons button.equals {
-    background: #bbf7d0; 
-    color: #075985;
-}
-#calculator .buttons button:focus {
-    outline: 2px solid #60a5fa; 
-}
-    </style>
 </head>
 <body>
   <div class="container">
