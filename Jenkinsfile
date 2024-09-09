@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Trigger CodeBuild') {
             steps {
-                sh 'aws codebuild start-build --project-name LWweb123 --source-version master --region ap-south-1'
+                sh 'aws codebuild start-build --project-name PracticeAWS --source-version main --region ap-south-1'
             }
         }
     }
